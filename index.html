@@ -6,18 +6,46 @@
 
 <body>
 
- <a-scene>
+  <a-scene>
 
-  <a-box
-    animation="property: position; to: 1 8 -10; dur: 2000; easing: linear; loop: true"
-    position="-1 3 -3"
-    rotation="0 45 0"
-    color="#4CC3D9">
-  </a-box>
 
-  <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+ 		<a-mixin id=“stern” geometry=“primitive: box” material random-position=“min: -50 -50 -50; max: 50 50 50” scale=“1 1 1”>
+ 		</a-mixin>
 
-  <a-sky color="#ECECEC"></a-sky>
+
+ 	<a-sphere position=“0 1 -5” radius=“0.9” color=“darkred”>
+ 		<a-animation attribute=“position” dur=“2000” fill=“forwards” to=“0 1 0” repeat=“indefinite” easing=“linear”>
+ 		</a-animation>
+ 	</a-sphere>
+
+
+ </a-sphere>
+ <a-sphere position=“-5 0 -5” radius=“1.25” color=“firebrick”></a-sphere>
+ <a-sphere position=“0 1 -5” radius=“0.9” color=“darkred”></a-sphere>
+
+
+ <a-torus color=“coral” position=“0 1.25 -5” radius=“2”></a-torus>
+ <a-torus color=“tomato” position=“0 1.25 -5” radius=“2”></a-torus>
+
+
+ <a-cylinder position=“0 0.75 -3” radius=“0.1” height=“1” color=“steelblue”></a-cyclinder>
+ <a-cylinder position=“0.5 0.75 -3” radius=“0.1” height=“1” color=“steelblue”></a-cyclinder>
+ <a-cylinder position=“-0.5 0.75 -3” radius=“0.1” height=“1” color=“steelblue”></a-cyclinder>
+ <a-cylinder position=“1 0.75 -3” radius=“0.1” height=“1” color=“steelblue”></a-cyclinder>
+ <a-cylinder position=“-1 0.75 -3” radius=“0.1” height=“1” color=“steelblue”></a-cyclinder>
+
+
+ <a-plane position=“0 0 -4” rotation=“-90 0 0” width=“10” height=“10” color=“mediumseagreen”></a-plane>
+
+
+ <a-sky color=“skyblue”></a-sky>
+
+
+ <a-entity entity-generator=“mixin: stern; num:500” material=“color:white; shader:flat”>
+ 	<a-animation attribute=“position” dur=“500” fill=“forwards” to=“0 8 0” repeat=“indefinite” easing=“linear”>
+ 	</a-animation>
+ </a-entity>
+
 
  </a-scene>
 
