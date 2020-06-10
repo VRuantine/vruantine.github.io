@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-sky color="#00DDFF"></a-sky>
+    <a-light type="ambient" color="#FFFFFF"></a-light>
+
+      <a-cylinder
+      src="https://i.imgur.com/mYmmbrp.jpg"
+      position="0 1.5 -4"
+      rotation="90 0 0"
+      radius="3"
+      height="2.5"
+      color="#FFC65D"
+      animation="property:position;
+                to: 0 1.5 0;
+                dur: 2000;
+                easing: linear;
+                loop: true"
+
+    ></a-cylinder>
+
+    <a-torus
+    position ="0 2 -2"
+    src="https://i.imgur.com/mYmmbrp.jpg"
+    arc="360"
+    radius="3"
+    radius-tubular="0.8"
+    rotation="0 0 0"
+    animation="property:rotation;
+              to: 0 0 360;
+              dur: 8000;
+              easing: linear;
+              loop: true"
+
+
+
+
+    ></a-torus>
+
+    <a-torus
+    position ="0 2 -4"
+    color = "#FF33FF"
+    src="https://i.imgur.com/mYmmbrp.jpg"
+    arc="360"
+    radius="3"
+    radius-tubular="0.9"
+    animation="property:rotation;
+              to: 0 0 -360;
+              dur: 30000;
+              easing: linear;
+              loop: true"
+      ></a-torus>
+
+      <a-torus
+      position ="0 2 -6"
+      color = "#FF33FF"
+      src="https://i.imgur.com/mYmmbrp.jpg"
+      arc="360"
+      radius="3"
+      radius-tubular="1.5"
+      animation="property:rotation;
+                to: 0 0 -360;
+                dur: 30000;
+                easing: linear;
+                loop: true"
+        ></a-torus>
+
+
+
+      <a-plane
+      src="https://i.imgur.com/mYmmbrp.jpg"
+      repeat="1 20"
+      position="0 0 0"
+      rotation="-90 0 0"
+      width="10"
+      height="400"
+      color="#FFFFFF"
+
+
+
+      ></a-plane>
+    <a-sky src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"></a-sky>
+    </a-scene>
+  </body>
+</html>
