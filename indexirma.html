@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-  </head>
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-star-system-component@1.0.0/index.js"></script>
+</head>
   <body>
     <a-scene>
 
-      <a-mixin id=“stern” geometry=“primitive: box” material random-position=“min: -50 -50 -50; max: 50 50 50” scale=“1 1 1”>
-</a-mixin>
+      <a-camera>
+        <a-cursor color="#FAFAFA"></a-cursor>
+      </a-camera>
+
 
       <a-assets>
         <img id="ball" src="https://i.imgur.com/fdZlBzJ.jpeg">
         <img id="ground" src="https://i.imgur.com/yGA3QC1.gif">
         <img id="sky" src="https://i.imgur.com/X2O8kfP.jpeg">
+
+
+        <img id = "walls" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(2).png?v=1583507325246" >
+        <img id= "door" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(9).png?v=1583508687382">
+        <img id= "roof" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(3).png?v=1583507319154">
+
+
+
       </a-assets>
 
-      <a-sphere position="0 2 -5" rotation="0 45 45" scale="0.5 0.5 0.5" src="#ball">
-        <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
-          to="0 2.2 -5"></a-animation>
-        <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
-        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
-        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      </a-sphere>
+      <a-mixin id="rotation" animation="property: rotation; loop: true; from:  0 0 0; to: 0 360 0; dur: 20000; easing: linear;"></a-mixin>
 
-      <a-sphere position="5 10 5" rotation="0 45 45" scale="0.2 0.2 0.2" src="#ball">
+
+
+
+<!-- Examle for Animation -->
+<!-- <a-box position="-1 1.6 -5" animation="property: position; to: 1 8 -10; dur: 2000; easing: linear; loop: true" color="tomato"></a-box> -->
+
+
+
+      <!--Ball -->
+  <!-- <a-sphere position="0 2 -5" rotation="0 45 45" scale="1 1 1" src="#ball">-->
+
+  <a-sphere position="0 2 -5" animation="property: position"; to="1 8 -10"; dur= "2000"; easing= "linear"; loop= "true" color="tomato"></a-sphere>
+
+  <!--<a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
+    to="0 2.2 -5"></a-animation>
+  <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+</a-sphere>-->
+
+      <!--Ball 2-->
+      <a-sphere position="0 5 -5" rotation="0 45 45" scale="0.2 0.2 0.2" src="#ball">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="0 2.2 -5"></a-animation>
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
@@ -34,13 +60,22 @@
 
       <a-sky height="2048" radius="30" src="#sky" theta-length="90" width="2048"></a-sky>
       <a-light type="ambient" color="#445451"></a-light>
+
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
       <a-plane src="#ground" rotation="-90 0 0" height="100" width="100"></a-plane>
-      <a-text value="Welcome To My Playground" color="#BBB" position="-0.5 0 -2" scale="1 1 1"></a-text>
 
-      <a-camera>
-        <a-cursor color="#FAFAFA"></a-cursor>
-      </a-camera>
+      <!--House -->
+      <a-box src="#walls" position = "15 0 -10" depth = "10" width = "10" height = "10"></a-box>
+      <a-cone src = "#roof" position = "15 6.5 -10" height = "3" radius-bottom = "7.25"></a-cone>
+      <a-plane height = "3.5" width ="1.7" position = "15 1.75 -4.98" src= "#door"></a-plane>
+
+      <!--House2 -->
+      <a-box src="#walls" position = "-15 -5 -20" depth = "10" width = "10" height = "10"></a-box>
+      <a-cone src = "#roof" position = "-15 1.5 -20" height = "3" radius-bottom = "7.25"></a-cone>
+      <a-plane height = "3.5" width ="1.7" position = "-15 -3.25 -14.98" src= "#door"></a-plane>
+
+
+
     </a-scene>
   </body>
 </html>
