@@ -6,10 +6,38 @@
   <body>
     <a-scene>
 
+      <a-camera>
+        <a-cursor color="#FAFAFA"></a-cursor>
+      </a-camera>
+      
+
       <a-assets>
         <img id="ball" src="https://i.imgur.com/fdZlBzJ.jpeg">
         <img id="ground" src="https://i.imgur.com/yGA3QC1.gif">
         <img id="sky" src="https://i.imgur.com/X2O8kfP.jpeg">
+
+        <img id = "cube1" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(13).png?v=1583510511164">
+        <img id = "cube2" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(14).png?v=1583510519157">
+        <img id = "gladyoucame" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(16).png?v=1583511175797">
+        <img id = "stick" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(4).png?v=1583507307956">
+        <img id= "person" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(15).png?v=1583511168794">
+        <img id = "walls" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(2).png?v=1583507325246" >
+        <img id="crate" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(8).png?v=1583508500186">
+        <img id="grass" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(1)%20(1)%20(2)%20(1).png?v=1583948458834">
+        <img id="logs" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(4).png?v=1583507307956">
+        <img id="leaves" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki.png?v=1583507333250">
+        <img id="fire" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(6).png?v=1583508001523">
+        <img id="door" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(9).png?v=1583508687382">
+        <img id= "roof" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(3).png?v=1583507319154">
+        <img id= "floors" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(21).png?v=1583512881502">
+        <img id= "birb" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(12).png?v=1583509962638">
+        <img id= "sign" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(11).png?v=1583509824564">
+        <img id= "snow" src = "data:image/jpeg;base64,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">
+        <img id= "carrot" src = "https://thumbs.dreamstime.com/t/macro-carrot-peel-texture-close-up-fine-detail-45875646.jpg">
+        <img id= "musicbox" src="https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(23).png?v=1583514022085">
+        <img id= "snowmanface" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(19).png?v=1583511645961">
+        <img id= "sky" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(7).png?v=1583508249311">
+
       </a-assets>
 
       <a-mixin id=“stern” geometry=“primitive: box” material random-position=“min: -50 -50 -50; max: 50 50 50” scale=“1 1 1”>
@@ -54,9 +82,7 @@
       <a-sphere src="#grass" position = "-15 -5 -20" radius="10"></a-sphere>
 
 
-      <a-camera>
-        <a-cursor color="#FAFAFA"></a-cursor>
-      </a-camera>
+
     </a-scene>
   </body>
 </html>
