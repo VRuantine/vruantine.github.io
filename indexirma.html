@@ -4,9 +4,18 @@
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js">
   </script>
   </head>
-  
+
   <body>
     <a-scene>
+
+      <a-mixin id=“stern” geometry=“primitive: box” material random-position=“min: -50 -50 -50; max: 50 50 50” scale=“1 1 1”>
+</a-mixin>
+
+<a-sphere position=“0 1 -5” radius=“0.9” color=“darkred”>
+  <a-animation attribute=“position” dur=“2000” fill=“forwards” to=“0 1 0” repeat=“indefinite” easing=“linear”>
+  </a-animation>
+</a-sphere>
+
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
