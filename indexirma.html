@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 </head>
+
   <body>
     <a-scene>
 
@@ -21,18 +24,58 @@
 
       </a-assets>
 
-      <!--><a-mixin id="rotation" animation="property: rotation; loop: true; from:  0 0 0; to: 0 360 0; dur: 20000; easing: linear;"></a-mixin>-->
+
+      <a-cylinder
+      src="https://i.imgur.com/mYmmbrp.jpg"
+      position="0 1.5 -4"
+      rotation="90 0 0"
+      radius="3"
+      height="2.5"
+      color="#FFC65D"
+      animation="property:position;
+                to: 0 1.5 0;
+                dur: 2000;
+                easing: linear;
+                loop: true"
+
+    ></a-cylinder>
 
 
 
       <!--Ball -->
-<a-sphere position="0 2 -5" rotation="0 45 45" scale="1 1 1" src="#ball">
-  <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
+      <a-sphere
+      position="0 2 -5"
+      rotation="0 45 45"
+      scale="1 1 1"
+      src="#ball"
+      animation="property:position;
+                  to:0 2.2 -5;
+                  dur: 2000;
+                  easing: linear;
+                  repeat: indefinite;
+                  loop: true"
+      animation="property:rotation;
+                  begin: click;
+                  to: 360 405 45;
+                  dur: 2000;"
+      animation="property:scale;
+                  begin: mouseenter;
+                  to: 2.3 2.3 2.3;
+                  dur: 300;"
+      animation="property:scale;
+                  begin: mouseleave;
+                  to: 2 2 2;
+                  dur: 300;"
+      </a-sphere>
+
+
+
+<!-- <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="0 2.2 -5"></a-animation>
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
         <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
-        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-</a-sphere>
+        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation> -->
+
 
       <!--Ball 2-->
       <a-sphere position="0 5 -5" rotation="0 45 45" scale="0.2 0.2 0.2" src="#ball">
