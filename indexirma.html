@@ -20,6 +20,14 @@
         <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
       </a-sphere>
 
+      <a-sphere position="5 2 5" rotation="0 45 45" scale="0.2 0.2 0.2" src="#ball">
+        <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
+          to="0 2.2 -5"></a-animation>
+        <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+      </a-sphere>
+
 
       <a-sky height="2048" radius="30" src="#sky" theta-length="90" width="2048"></a-sky>
       <a-light type="ambient" color="#445451"></a-light>
