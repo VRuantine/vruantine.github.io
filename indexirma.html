@@ -6,16 +6,21 @@
   <body>
     <a-scene>
 
-      <a-mixin id=“stern” geometry=“primitive: box” material random-position=“min: -50 -50 -50; max: 50 50 50” scale=“1 1 1”>
-</a-mixin>
-
       <a-assets>
         <img id="ball" src="https://i.imgur.com/fdZlBzJ.jpeg">
         <img id="ground" src="https://i.imgur.com/yGA3QC1.gif">
         <img id="sky" src="https://i.imgur.com/X2O8kfP.jpeg">
       </a-assets>
 
-      <a-sphere position="0 2 -5" rotation="0 45 45" scale="0.5 0.5 0.5" src="#ball">
+      <a-mixin id=“stern” geometry=“primitive: box” material random-position=“min: -50 -50 -50; max: 50 50 50” scale=“1 1 1”>
+</a-mixin>
+
+<a-entity entity-generator=“mixin: stern; num:500” material=“color:white; shader:flat”>
+	<a-animation attribute=“position” dur=“500” fill=“forwards” to=“0 8 0” repeat=“indefinite” easing=“linear”>
+	</a-animation>
+</a-entity>
+
+      <a-sphere position="-5 0 5" rotation="0 45 45" scale="0.5 0.5 0.5" src="#ball">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="0 2.2 -5"></a-animation>
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
@@ -23,7 +28,7 @@
         <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
       </a-sphere>
 
-      <a-sphere position="5 10 5" rotation="0 45 45" scale="0.2 0.2 0.2" src="#ball">
+      <a-sphere position="0 1 -5" rotation="0 45 45" scale="0.2 0.2 0.2" src="#ball">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="0 2.2 -5"></a-animation>
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
