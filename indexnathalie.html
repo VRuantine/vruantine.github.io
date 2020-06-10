@@ -39,7 +39,7 @@
                     crossorigin="anonymous">
                 <img id="moon-texture" src="https://cdn.glitch.com/d558c128-2ed0-4284-a0da-4d18b9163ad6%2FMoonmap_from_clementine_data.png?1541102132708"
                     crossorigin="anonymous">
-                <a-asset-item id="asteroids" response-type="arraybuffer" src="https://cdn.glitch.com/d558c128-2ed0-4284-a0da-4d18b9163ad6%2Fasteroides.glb?1541106805090"></a-asset-item>
+                <a-asset-item id="asteroids" response-type="arraybuffer" color="blue"src="https://cdn.glitch.com/d558c128-2ed0-4284-a0da-4d18b9163ad6%2Fasteroides.glb?1541106805090"></a-asset-item>
             </a-assets>
 
             <!-- Let's start using a custom camera so we can put the sun in the
@@ -60,7 +60,7 @@
 
             <!-- We'll add an asteroid belt using a gltf model, see the Readme
             for more info about how to use these -->
-            <a-entity id="asteroid-belt" gltf-model="#asteroids" scale="2.1 2.1 2.1" position="0 0 0"color="blue"></a-entity>
+            <a-entity id="asteroid-belt" gltf-model="#asteroids" scale="2.1 2.1 2.1" position="0 0 0"></a-entity>
 
             <!-- we use the textures defined in assets to make our planets more
             realistic-->
