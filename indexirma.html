@@ -1,88 +1,50 @@
 <!DOCTYPE html>
-
 <html>
+  <head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-randomizer-components@^3.0.1/dist/aframe-randomizer-components.min.js"></script>
+    <script src="https://unpkg.com/aframe-entity-generator-component@^3.0.0/dist/aframe-entity-generator-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+  </head>
 
-<head>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-</head>
 
   <body>
+
+
     <a-scene>
 
-
       <a-assets>
-        <img id="ball" src="https://i.imgur.com/fdZlBzJ.jpeg">
-        <img id="ground" src="https://i.imgur.com/yGA3QC1.gif">
-        <img id="sky" src="https://i.imgur.com/X2O8kfP.jpeg">
-
-
-        <img id = "walls" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(2).png?v=1583507325246" >
-        <img id= "door" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(9).png?v=1583508687382">
-        <img id= "roof" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(3).png?v=1583507319154">
-
-
-
+        <img id="BALL" src="https://i.imgur.com/fdZlBzJ.jpeg">
+        <img id="GROUND" src="https://i.imgur.com/yGA3QC1.gif">
+        <img id="SKY" src="https://i.imgur.com/X2O8kfP.jpeg">
       </a-assets>
 
+      <a-mixin id="stern" geometry="primitive: box" material random-position="min: -50 -50 -50; max: 50 50 50" scale="1 1 1">
+            </a-mixin>
 
-      <!--Ball -->
-      <a-sphere
-      position="0 2 -5"
-      rotation="0 45 45"
-      scale="1 1 1"
-      src="#ball"
-      animation="property:position;
-                  to:0 2.2 -5;
-                  dur: 2000;
-                  repeat: indefinite
-
-                  property:rotation;
-                  begin: click;
-                  to: 360 405 45;
-                  dur: 2000;
-
-                  property:scale;
-                  begin: mouseenter;
-                  to: 2.3 2.3 2.3;
-                  dur: 300;
-
-                  property:scale;
-                  begin: mouseleave;
-                  to: 2 2 2;
-                  dur: 300;"
-      ></a-sphere>
-
-
-
-<!-- <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
-          to="0 2.2 -5"></a-animation>
-        <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
-        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
-        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-
-
-
-      <a-sphere position="0 5 -5" rotation="0 45 45" scale="0.2 0.2 0.2" src="#ball">
+      <a-sphere position="0 2 -5" rotation="0 45 45" scale="2 2 2" src="#BALL">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="0 2.2 -5"></a-animation>
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
         <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
         <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      </a-sphere> -->
+      </a-sphere>
 
-
-      <a-sky height="2048" radius="30" src="#sky" theta-length="90" width="2048"></a-sky>
+      <a-sky height="2048" radius="30" src="#SKY" theta-length="90" width="2048"></a-sky>
       <a-light type="ambient" color="#445451"></a-light>
-
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
-      <a-plane src="#ground" rotation="-90 0 0" height="100" width="100"></a-plane>
-
+      <a-plane src="#GROUND" rotation="-90 0 0" height="100" width="100"></a-plane>
 
 
       <a-camera>
         <a-cursor color="#FAFAFA"></a-cursor>
       </a-camera>
 
+        <a-entity entity-generator="mixin: stern; num:500" material="color:white; shader:flat">
+         <a-animation attribute="position" dur="800" fill="forwards" to="0 8 0" repeat="indefinite" easing="linear">
+        </a-animation>
+    </a-entity>
 
     </a-scene>
   </body>
