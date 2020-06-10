@@ -25,15 +25,9 @@
 
       </a-assets>
 
-      <a-mixin id="red" material="color: red"></a-mixin>
-      <a-mixin id="blue" material="color: blue"></a-mixin>
-      <a-mixin id="cube" geometry="primitive: box"></a-mixin>
+      <a-mixin id="rotation" animation="property: rotation; loop: true; from:  0 0 0; to: 0 360 0; dur: 20000; easing: linear;"></a-mixin>
 
-        <a-entity mixin="red cube"></a-entity>
-        <a-entity mixin="blue cube"></a-entity>
 
-        <a-entity material="color: red" geometry="primitive: box"></a-entity>
-        <a-entity material="color: blue" geometry="primitive: box"></a-entity>
 
 
 <!-- Examle for Animation -->
