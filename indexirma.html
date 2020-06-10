@@ -7,16 +7,13 @@
 <body>
  <a-scene>
 
-   <a-mixin id=“stern” geometry=“primitive: box” material random-position=“min: -50 -50 -50; max: 50 50 50” scale=“1 1 1”>
-		</a-mixin>
 
-    <a-sphere position=“0 1 -5” radius=“0.9” color=“darkred”>
-  		<a-animation attribute=“position” dur=“2000” fill=“forwards” to=“0 1 0” repeat=“indefinite” easing=“linear”>
-  		</a-animation>
-  	</a-sphere>
-    
+  <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+  <a-sky color="#ECECEC"></a-sky>
 
  </a-scene>
+
 
  </body>
 </html>
