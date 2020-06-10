@@ -17,6 +17,8 @@
             other files we want to include in our scene. They can be referenced
             later by their ID -->
             <a-assets>
+              <a-assets>     <a-asset-item id="cloud-obj" src="cloud.obj"></a-asset-item>     <a-asset-item id="cloud-mtl" src="cloud.mtl"></a-asset-item>   </a-assets>    <!-- Using the asset management system. -->   <a-obj-model src="#cloud-obj" mtl="#cloud-mtl"></a-obj-model>    <!-- Defining the URL inline. Not recommended but may be more comfortable. -->   <a-obj-model src="cloud.obj" mtl="cloud.mtl"></a-obj-model> </a-scene>
+
                 <img id="sun-texture" src="https://cdn.glitch.com/d558c128-2ed0-4284-a0da-4d18b9163ad6%2F1024px-Map_of_the_full_sun.jpg?1540859304920"
                     crossorigin="anonymous">
                 <img id="mercury-texture" src="https://cdn.glitch.com/d558c128-2ed0-4284-a0da-4d18b9163ad6%2Fmercurymap.jpg?1541102122291"
