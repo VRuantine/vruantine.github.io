@@ -18,9 +18,9 @@
 
 
         <img id = "walls" src = "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(2).png?v=1583507325246" >
-        <img id="door" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(9).png?v=1583508687382">
+        <img id= "door" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(9).png?v=1583508687382">
         <img id= "roof" src= "https://cdn.glitch.com/f84aa68b-44e9-4359-adcf-42fe5892555d%2F2020_03_06_Kleki%20(3).png?v=1583507319154">
-    
+
 
       </a-assets>
 
@@ -41,7 +41,7 @@
   <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
 </a-sphere>
 
-
+      <!--Ball -->
       <a-sphere position="0 5 -5" rotation="0 45 45" scale="0.2 0.2 0.2" src="#ball">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="0 2.2 -5"></a-animation>
@@ -55,7 +55,6 @@
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
       <a-plane src="#ground" rotation="-90 0 0" height="100" width="100"></a-plane>
-      <a-text value="Welcome To My Playground" color="#BBB" position="-0.5 0 -2" scale="1 1 1"></a-text>
 
       <!--House -->
       <a-box src="#walls" position = "15 0 -10" depth = "10" width = "10" height = "10"></a-box>
