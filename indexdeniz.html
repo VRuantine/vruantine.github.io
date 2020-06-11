@@ -14,6 +14,7 @@
   <a-assets>
     <a-asset-item id="lump_grass" src="assets/lump_grass/scene.gltf"></a-asset-item>
     <img id="SKY" src="assets/reef_img.jpg">
+    <img id="FlOOR" src="assets/sand_gr.jpeg"
   </a-assets>
 
     <a-entity gltf-model="#lump_grass" position="0 -5 -50" scale="0.100 0.100 0.100"></a-entity>
@@ -21,7 +22,7 @@
     <a-entity gltf-model="#lump_grass" position="40 -5 -9" scale="0.100 0.100 0.100"></a-entity>
     <a-entity gltf-model="#lump_grass" position="5 -5 -5" scale="0.100 0.100 0.100"></a-entity>
 
-    <a-plane rotation="-90 0 0" width="500" height="500" color="#edc9af"></a-plane>
+    <a-plane src="#GROUND" ></a-plane>
 
 
      <a-sky src="#SKY" ></a-sky>
