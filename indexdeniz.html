@@ -1,44 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-</head>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+
+
 
 <body>
+
  <a-scene>
 
 
- <a-box color="red"></a-box>
- <a-entity id="box" geometry="primitive: box" material="color: red"></a-entity>
- <a-box position="0 2 0" rotation="0 45 45" scale="2 4 2">
-  <a-sphere position="1 0 3"></a-sphere>
-</a-box>
 
 
+   <a-entity id="box" geometry="primitive: box" material="color: red"></a-entity>
 
+   <a-box position="0 2 0" rotation="0 45 45" scale="2 4 2">
+     <a-sphere position="1 0 3"></a-sphere>
+   </a-box>
 
-
-
-
-
-
-     <a-assets>
-       <a-asset-item id="lump_grass" src="/assets/spider_lp/spider.gltf"></a-asset-item>
-       <position
-     </a-assets>
-
-     <a-entity gltf-model="#spider_lp" position="0 0 2" scale="10 10 10"</a-entity>
-
-       <a-assets>
-         <!-- ... -->
-         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
-         <!-- ... -->
-       </a-assets>
-       <!-- ... -->
-       <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
-       <!-- ... -->
-
-  <a-plane  rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+<a-assets>
+      <a-asset-item id="lump_grass" src="/assets/spider_lp/spider.gltf"></a-asset-item>
+      <position
+      <a-entity gltf-model="#spider_lp" position="0 0 2" scale="10 10 10"</a-entity>
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+      <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
+      <a-plane  rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+</assets>
 
   <a-sky color="#ECECEC"></a-sky>
 
