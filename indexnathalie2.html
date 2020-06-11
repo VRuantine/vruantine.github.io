@@ -16,14 +16,24 @@
     <a-scene>
       <a-assets>
         <a-asset-item
+          id="Jaguar"
+          src="assets/Jaguar.gltf"
+        ></a-asset-item
+        <a-asset-item
           id="earth"
           src="assets/CHAHIN_EARTH.gltf"
-        ></a-asset-item>
+        ></a-asset-item
+        <a-asset-item
+        id="zebra"
+        src="assets/Mesh_Zebra.gltf"
+        ></a-asset-item
       </a-assets>
 
       <a-entity gltf-model="#earth" scale="0.01 0.01 0.01" position="1 2 3"></a-entity>
+      <a-entity gltf-model="#zebra" scale="0.1 0.1 0.1" position="3 2 1"></a-entity>
+      <a-entity gltf-model="#Jaguar" scale="0.1 0.1 0.1" position="4 5 2"></a-entity>
 
-      <a-sky color="blue"></a-sky>
+      <a-sky color="pink"></a-sky>
     </a-scene>
   </body>
 </html>
