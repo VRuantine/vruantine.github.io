@@ -1,24 +1,292 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-</head>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+    <style piggy-ext="" data-styled-version="4.4.1"></style>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="controll" src="/assets/imgLeon/Control.png">
+        <img id="airport" src="/assets/imgLeon/img1.jpeg">
+        <img id="dutyfree" src="/assets/imgLeon/img2.jpeg">
+        <img id="waiting" src="/assets/imgLeon/img3.jpeg">
+        <img id="flying" src="/assets/imgLeon/img4.jpeg">
+        <img id="flyingWindow" src="/assets/imgLeon/img6.jpg">
+        <img id="landing" src="/assets/imgLeon/img7.jpg">
+        <img id="lobby" src="/assets/imgLeon/img8.jpeg">
+        <img id="room" src="/assets/imgLeon/img9.jpeg">
+        <img id="pool" src="/assets/imgLeon/img10.jpeg">
+        <img id="donut" src="/assets/imgLeon/img_donut1.jpeg">
 
-<body>
- <a-scene>
+        <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous">
+        <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
+        <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
+
+        <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
+        <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
+        <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
+
+
+
+      </a-assets>
+
+      <a-sky color="#00DDFF"></a-sky>
+    <a-light type="ambient" color="#FFFFFF"></a-light>
+
+
+      <a-cylinder
+      src="#airport"
+      position="0 1.5 -2"
+      rotation="90 0 0"
+      radius="3"
+      height="2.5"
+      opacity="1"
+      animation="property:position;
+                to: 0 1.5 -5;
+                dur: 15000;
+                easing: linear;
+                loop:1;
+                "
+      animation__2="property: opacity;
+                  to: 0;
+                  dur:15000;"
+    >
+
+
+  </a-cylinder>
+
+
+    <a-torus
+    position ="0 2 -2"
+    src="#airport"
+    arc="360"
+    radius="3"
+    radius-tubular="0.8"
+    rotation="0 0 0"
+    animation="property:rotation;
+              to: 0 0 360;
+              dur: 8000;
+              easing: linear;
+              loop: true"
+
+    ></a-torus>
+
+    <a-torus
+    position ="0 2 -4"
+    src="#dutyfree"
+    arc="360"
+    radius="3"
+    radius-tubular="0.8"
+    animation="property:rotation;
+              to: 0 0 -360;
+              dur: 30000;
+              easing: linear;
+              loop: true"
+      ></a-torus>
+
+    <a-box
+    position ="0 2 -7"
+    scale="6 4 4"
+    src="#waiting"
+    animation="property:rotation;
+              to:0 360 0;
+              dur:30000;
+              easing: linear;
+              loop:true"
+    ></a-box>
+
+
+
+
+
+
+    <a-torus
+    position ="0 2 -7"
+    src="#flying"
+    repeat="4 4"
+    arc="360"
+    radius="3"
+    radius-tubular="0.8 2.2"
+    rotation="0 0 0"
+    animation="property:rotation;
+              to: 0 0 360;
+              dur: 8000;
+              easing: linear;
+              loop: true"
+
+    ></a-torus>
+
+
+    <a-torus-knot
+    src="#flyingWindow"
+    repeat="5 5"
+    position="0 2 -10"
+    arc="10"
+    p="5"
+    q="7"
+    radius="5"
+    radius-tubular="0.5"></a-torus-knot>
+
+
+    <a-sphere
+    src="#landing"
+    repeat="10 10"
+    position="0 1.5 -13"
+    rotation="0 0 0"
+    radius="3"
+    height="2.5"
+    opacity="1"
+
+    animation="property:rotation;
+                        to: 360 360 0;
+                        dur: 8000;
+                        easing: linear;
+                        loop:true;
+                        "
+  >
+
+
+</a-sphere>
+
 
   <a-box
-    animation="property: position; to: 1 8 -10; dur: 2000; easing: linear; loop: true"
-    position="-1 3 -3"
-    rotation="0 45 0"
-    color="#4CC3D9">
-  </a-box>
+  position ="0 0 -14"
+  scale="6 6 2"
+  src="#lobby"
+  rotation="0 0 0"
+  animation="property:rotation;
+            to: 0 0 360;
+            dur: 4000;
+            easing: linear;
+            loop: true"
 
-  <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+  ></a-box>
 
-  <a-sky color="#ECECEC"></a-sky>
+  <a-box
+  position ="0 4 -14.5"
+  scale="6 6 2"
+  src="#lobby"
+  rotation="0 0 0"
+  animation="property:rotation;
+            to: 360 0 -360;
+            dur: 8000;
+            easing: linear;
+            loop: true"
 
- </a-scene>
+  ></a-box>
 
- </body>
+  <a-box
+  position ="-4 0 -12.5"
+  scale="6 6 2"
+  src="#lobby"
+  rotation="0 0 0"
+  animation="property:rotation;
+            to: 0 0 360;
+            dur: 4000;
+            easing: linear;
+            loop: true"
+
+  ></a-box>
+
+  <a-box
+  position ="4 4 -13.5"
+  scale="6 6 2"
+  src="#lobby"
+  rotation="0 0 0"
+  animation="property:rotation;
+            to: 0 0 -360;
+            dur: 8000;
+            easing: linear;
+            loop: true"
+
+  ></a-box>
+
+  <a-torus
+  position ="0 2 -16"
+  src="#room"
+  repeat="7 4"
+  arc="360"
+  radius="5"
+  radius-tubular="0.8"
+  rotation="0 0 0"
+  animation="property:rotation;
+            to: 0 0 360;
+            dur: 8000;
+            easing: linear;
+            loop: true"
+
+  ></a-torus>
+
+
+
+
+
+
+
+
+
+
+      <a-torus
+      position ="0 2 -20"
+
+      src="#pool"
+      arc="360"
+      radius="3"
+      radius-tubular="1.5"
+      animation="property:rotation;
+                to: 0 0 -360;
+                dur: 30000;
+                easing: linear;
+                loop: true"
+        ></a-torus>
+
+        <a-entity position="0 -0.3 -30" rotation="-30 0 0">
+          <a-entity rotation="0 0 5" position="-4 2 0.2" text-geometry="value: Welcome to your; font: #dawningFont; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1; height: 0;" material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;"></a-entity>
+          <a-entity position="-0.5 0.5 -0.5" scale="0.6 1.2 1" text-geometry="value: HOLIDAY; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:pink; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
+
+          <a-entity position="2 0.2 0.3" text-geometry="value: fun fun fun; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0;" material="shader: flat; color: white"></a-entity>
+          <a-entity position="2 0.2 0.3" text-geometry="value: fun fun fun; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0; bevelEnabled: true; bevelSize: 0.04; bevelThickness: 0.04; curveSegments: 1" material="shader: flat; color: white; transparent: true; opacity: 0.4"></a-entity>
+        </a-entity>
+
+        <a-entity light="color: ffaaff; intensity: 0.1" position="0 8 -30"></a-entity>
+        <a-entity light="color: white; intensity: 0.1" position="0 8 -30"></a-entity>
+
+
+        <a-torus
+        position ="-20 2 -35"
+        rotation="90 0 0"
+        src="#donut"
+        repeat="16 8"
+        arc="360"
+        radius="5"
+        radius-tubular="0.9"
+        animation="property:rotation;
+                  to: 90 360 0;
+                  dur: 30000;
+                  easing: linear;
+                  loop: true"
+          ></a-torus>
+
+
+
+
+
+
+
+
+      <a-plane
+      src="/assets/imgLeon/img_plane.jpeg"
+      repeat="1 20"
+      position="0 0 0"
+      rotation="-90 0 0"
+      width="10"
+      height="400"
+      color="#FFFFFF"
+      ></a-plane>
+
+
+    <a-sky src="/assets/imgLeon/img0.jpeg"></a-sky>
+    </a-scene>
+  </body>
 </html>
