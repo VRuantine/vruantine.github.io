@@ -96,7 +96,6 @@
       ></a-cone>
 
 
-
       <!-- BIG GATE ON THE BACK -->
       <a-torus color="#FFA07A" position="0 1.25 -10" radius="2"></a-torus>
       <a-torus color="#FFA07A" position="0 1.25 -10" radius="4"></a-torus>
@@ -126,24 +125,27 @@
 
       <!-- ROBOTO -->
       <a-entity gltf-model="#robot" position="-10 0 -5" scale="3 3 3"></a-entity>
+      <a-entity gltf-model="#robot" position="10 0 -5" scale="3 3 3"></a-entity>
 
-
+      <!-- SKY -->
       <a-sky height="2040" radius="20" src="#SKY" theta-length="90" width="2040"></a-sky>
+
+      <!-- GROUND -->
       <a-light type="ambient" color="#E9967A"></a-light>
       <a-light type="point" intensity="0.5" position="2 4 4"></a-light>
       <a-plane src="#GROUND" rotation="-90 0 0" height="100" width="100"></a-plane>
 
-
+      <!-- CURSOR -->
       <a-camera>
         <a-cursor color="#FAFAFA"></a-cursor>
       </a-camera>
 
+      <!-- RAIN -->
       <a-entity entity-generator="mixin: stern; num:500" material="color:black; shader:flat">
         <a-animation attribute="position" dur="500" fill="forwards" to="0 8 0" repeat="indefinite" easing="linear">
         </a-animation>
       </a-entity>
 
-        <a-entity gltf-model="#robot" position="-10 0 -5" scale="3 3 3"></a-entity>
 
 
     </a-scene>
